@@ -13,7 +13,7 @@ class NewsSitemap(Sitemap):
     def items(self):
         return NewsItem.objects.filter(
             published=True,
-            news_date__lte=timezone.now,
+            news_date__lte=timezone.now(),
         )
 
     def location(self, item):
